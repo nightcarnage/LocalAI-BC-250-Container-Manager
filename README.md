@@ -217,11 +217,3 @@ Stop everything:
 * Deletes stored node IDs
 * Removes the generated Containerfile
 
-```
-
-If you want, I can also:
-- tighten wording without changing meaning
-- add diagrams
-- split this into sections for GitHub best practices
-- or generate a matching `CONTRIBUTING.md` / `LICENSE` 📦
-```
