@@ -7,9 +7,13 @@ LocalAI BC-250 Container Manager👇
 
 A LocalAI AIO launcher for Podman-based systems.
 
-This project provides a single-entrypoint script that builds a host-matched LocalAI container image and orchestrates Master, Federated, and Worker roles in a peer-to-peer (P2P) inference cluster.
+This project provides a single-entrypoint script that builds a host-matched LocalAI containe image
 
-The command parser intentionally supports multiple roles in a single invocation, allowing any combination of services to be launched on the same host.
+and orchestrates Master, Federated, and Worker roles in a peer-to-peer (P2P) inference cluster.
+
+The command parser intentionally supports multiple roles in a single invocation, allowing
+
+any combination of services to be launched on the same host.
 
 ---
 
@@ -17,7 +21,8 @@ The command parser intentionally supports multiple roles in a single invocation,
 
 Every argument is processed in order.
 
-The script uses a while loop over all CLI arguments. Each recognized command (`master`, `fed`, `worker`, etc.) is executed independently, not exclusively.
+The script uses a while loop over all CLI arguments.
+ Each recognized command (`master`, `fed`, `worker`, etc.) is executed independently, not exclusively.
 
 This means:
 
