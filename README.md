@@ -35,8 +35,8 @@ This means:
 
 ## Requirements
 
-- Fedora 43+ or Bazzite 42
-- Podman
+- Fedora 43+ Server or Bazzite 42 *not recomended due to window manager overhead
+- Podman (Check the Container based Managemnt box when installing Fedora 43 Server)
 - ASUS BC-250
 - `/dev/dri` access
 - Host networking allowed
