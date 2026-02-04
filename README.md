@@ -49,6 +49,17 @@ This means:
 chmod +x localai.sh
 ./localai.sh install
 ````
+---
+
+## ⚠️ Security Disclaimer: Static P2P Token
+
+This manager utilizes a **static P2P Token** hardcoded within the script to facilitate seamless communication between your BC-250 nodes (Master, Federated, and Workers).
+
+* **Intended Use:** This configuration is designed for **private, local-only MCP networks** (e.g., dedicated 5GbE backplane).
+* **Security Risk:** If your host ports (specifically `4001`) are exposed to the public internet, anyone with this token could potentially join your P2P inference cluster.
+* **Production recommendation:** It is highly recommended to update the `RAW_TOKEN` variable inside `localai.sh` with a unique string generated via `openssl rand -base64 32` if deploying outside of a strictly firewalled environment.
+
+---
 
 This applies:
 
