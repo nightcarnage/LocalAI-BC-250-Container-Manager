@@ -23,6 +23,12 @@ if [ "$STAGE" == "1" ]; then
 
     # 1. LVM Detection & Expansion
     # Fedora Server defaults to 50% disk allocation; this recovers the full SSD capacity.
+    
+ # --- CLONING & REPLICATION WARNING ---
+    # NOTE: Expanding LVM to 100% capacity is recommended for standalone nodes.
+    # However, if you plan to 'dd' or sector-clone an LVM drive to other nodes in your 
+    # cluster it will most likely fail to duplicate. If you plan to use replication, 
+    # a manual partition layout using ext4 or xfs or literally anything else during OS installation is preferred.
     if command -v lvs &> /dev/null; then
         FREE_SPACE=$(vgs --noheadings -o vg_free | xargs)
         if [[ ! -z "$FREE_SPACE" && "$FREE_SPACE" != "0" ]]; then
@@ -112,4 +118,5 @@ if [ "$STAGE" == "2" ]; then
     echo "FINISH" > "$STATE_FILE"
     log "Optimization Complete. Host is fully tuned for LocalAI clustering."
 fi
+
 
