@@ -1,6 +1,8 @@
 #!/bin/bash
 # Professional Two-Stage Host Setup for Fedora 43 / BC-250
 # Focus: Kernel Optimization, Storage Expansion, and Hardware Telemetry.
+# This script provides an automated, two-stage deployment to optimize Fedora 43 Server for high-performance LocalAI clustering. 
+# It is specifically tuned for the ASUS BC-250 mining APU and high-bandwidth P2P networking.
 
 STATE_FILE="$HOME/.install_stage"
 REPO_URL="https://github.com/bazzite-org/kernel-bazzite/releases/download/6.17.7-ba22"
@@ -110,3 +112,4 @@ if [ "$STAGE" == "2" ]; then
     echo "FINISH" > "$STATE_FILE"
     log "Optimization Complete. Host is fully tuned for LocalAI clustering."
 fi
+
