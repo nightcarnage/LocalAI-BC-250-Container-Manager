@@ -25,6 +25,10 @@ MASTER_ID="${APP_DIR}/.master_node_id"
 FED_ID="${APP_DIR}/.fed_node_id"
 WORKER_ID="${APP_DIR}/.worker_node_id"
 
+# ATTENTION: The TOKEN/API_KEY below is static.
+# This is intended for local development and private networks.
+# Do NOT deploy this container to a public-facing IP without changing this 
+# or implementing external auth.
 RAW_TOKEN=$(cat <<EOF
 b3RwOgogIGRodDoKICAgIGludGVydmFsOiAzNjAKICAgIGtleTogWEp4VGRjWmhadk94eG5Sb3UwNU42OHlsS1Q5UE5mTDdsYTJEZHI1QlhVUgogICAgbGVuZ3RoOiA0MwogIGNyeXB0bzoKICAgIGludGVydmFsOiA5MDAwCiAgICBrZXk6IHpwOUdtbmZ3UERhTVZvZUxrQmNYQ1ZQSnVWMzVLdlV6aGhYemhub2lFdU8KICAgIGxlbmd0aDogNDMKcm9vbTogRDBZNkNscWtqRFZqNjdVNXNXc3BmQU9BcENpUkUzQlJnZFJVS0xoRTJwTwpyZW5kZXp2b3VzOiBZOUxzZzBGV3BWcjVZSFRSaFgxeGxaSTVYcGxoUnVxWkpJaDM0M0lLazJCCm1kbnM6IHdqa2Y4aGhQdjlLRlpBQ1RsUDFNaTdVdEppd3BjVUNaOTg0bzdZaXluTWYKbWF4X21lc3NhZ2Vfc2l6ZTogMjA5NzE1MjAK
 EOF
